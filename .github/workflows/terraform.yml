@@ -61,7 +61,6 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.inputs.operation != 'Linting' || github.event.inputs.use-show || github.event.inputs.use-output
     env:
-      TF_VAR_billing_account: '${{ secrets.TF_VAR_billing_account }}'
       TF_VAR_org_id: '${{ secrets.TF_VAR_org_id }}'
     steps:
     - name: Check out repository code
